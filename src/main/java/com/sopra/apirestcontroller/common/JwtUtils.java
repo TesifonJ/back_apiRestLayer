@@ -19,7 +19,7 @@ import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
 @Component
-public class JwtTokenProvider {
+public class JwtUtils {
     @Value("${security.jwt.key.private}")
     private String privateKey;
 

@@ -17,7 +17,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.sopra.apirestcontroller.common.JwtTokenProvider;
+import com.sopra.apirestcontroller.common.JwtUtils;
 import com.sopra.apirestcontroller.common.DTO.AuthLoginRequestDto;
 import com.sopra.apirestcontroller.common.DTO.AuthResponseDto;
 import com.sopra.apirestcontroller.common.DTO.UserDto;
@@ -25,12 +25,12 @@ import com.sopra.apirestcontroller.domain.persistance.repository.Impl.UserReposi
 
 @Service
 public class UserDetailServiceImpl implements UserDetailsService {
-    private JwtTokenProvider jwtUtils;
+    private JwtUtils jwtUtils;
     private PasswordEncoder oPasswordEncoder;
     private UserRepositoryImpl oUserRepositoryImpl;
 
     @Autowired
-    public UserDetailServiceImpl(UserRepositoryImpl oUserRepositoryImpl, JwtTokenProvider jwtUtils, PasswordEncoder oPasswordEncoder) {
+    public UserDetailServiceImpl(UserRepositoryImpl oUserRepositoryImpl, JwtUtils jwtUtils, PasswordEncoder oPasswordEncoder) {
         this.oUserRepositoryImpl = oUserRepositoryImpl;
         this.jwtUtils = jwtUtils;
         this.oPasswordEncoder = oPasswordEncoder;

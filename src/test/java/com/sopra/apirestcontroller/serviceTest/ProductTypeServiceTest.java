@@ -19,7 +19,7 @@ import com.sopra.apirestcontroller.domain.persistance.repository.Impl.ProductTyp
 import com.sopra.apirestcontroller.domain.service.Impl.ProductTypeServiceImpl;
 
 @SpringBootTest
-public class TypeServiceTest {
+public class ProductTypeServiceTest {
 
     @Mock
     private ProductTypeRepositoryImpl TypeRepository;

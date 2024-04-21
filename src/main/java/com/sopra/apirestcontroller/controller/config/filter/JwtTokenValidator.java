@@ -14,7 +14,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.sopra.apirestcontroller.common.JwtTokenProvider;
+import com.sopra.apirestcontroller.common.JwtUtils;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -23,9 +23,9 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class JwtTokenValidator extends OncePerRequestFilter{
     
-    private JwtTokenProvider jwtUtils;
+    private JwtUtils jwtUtils;
 
-    public JwtTokenValidator (JwtTokenProvider jwtUtils){
+    public JwtTokenValidator (JwtUtils jwtUtils){
         this.jwtUtils = jwtUtils;
     }
 

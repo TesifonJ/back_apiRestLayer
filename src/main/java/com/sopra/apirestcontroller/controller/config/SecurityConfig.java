@@ -19,7 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-import com.sopra.apirestcontroller.common.JwtTokenProvider;
+import com.sopra.apirestcontroller.common.JwtUtils;
 import com.sopra.apirestcontroller.controller.config.filter.JwtTokenValidator;
 import com.sopra.apirestcontroller.domain.service.Impl.UserDetailServiceImpl;
 
@@ -27,7 +27,7 @@ import com.sopra.apirestcontroller.domain.service.Impl.UserDetailServiceImpl;
 @EnableWebSecurity
 public class SecurityConfig {
     @Autowired
-    private JwtTokenProvider jwtUtils;
+    private JwtUtils jwtUtils;
 
     
 
