@@ -35,6 +35,9 @@ import jakarta.validation.Valid;
 public class ProductTypeController {
     private ProductTypeServiceImpl oTypeService;
 
+    public ProductTypeController(){
+        
+    }
     @Autowired
     public ProductTypeController(ProductTypeServiceImpl oTypeService) {
         this.oTypeService = oTypeService;

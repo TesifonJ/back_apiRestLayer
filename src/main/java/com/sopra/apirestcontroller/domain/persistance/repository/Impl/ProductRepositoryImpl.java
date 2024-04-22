@@ -20,6 +20,9 @@ public class ProductRepositoryImpl implements iProductRepository {
 
     iProductDao oIProductDao;
 
+    public ProductRepositoryImpl(){
+        
+    }
     @Autowired
     public ProductRepositoryImpl(iProductDao oIProductDao) {
         this.oIProductDao = oIProductDao;

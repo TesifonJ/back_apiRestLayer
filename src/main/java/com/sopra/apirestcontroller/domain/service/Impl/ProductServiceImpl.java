@@ -9,10 +9,13 @@ import com.sopra.apirestcontroller.common.DTO.ProductDto;
 import com.sopra.apirestcontroller.domain.persistance.repository.Impl.ProductRepositoryImpl;
 import com.sopra.apirestcontroller.domain.service.iProductService;
 
-
 @Service
 public class ProductServiceImpl implements iProductService {
     ProductRepositoryImpl iProductRepository;
+
+    public ProductServiceImpl() {
+
+    }
 
     @Autowired
     public ProductServiceImpl(ProductRepositoryImpl iProductRepository) {

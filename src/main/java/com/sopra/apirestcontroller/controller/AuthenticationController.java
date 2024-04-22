@@ -23,12 +23,15 @@ public class AuthenticationController {
     
     private UserDetailServiceImpl userDetailServiceImpl;
 
+    
+    public AuthenticationController(){
+        
+    }
+
     @Autowired
     public AuthenticationController(UserDetailServiceImpl userDetailServiceImpl) {
         this.userDetailServiceImpl = userDetailServiceImpl;
     }
-
-
 
     @PostMapping("/log-in")
     public ResponseEntity<AuthResponseDto> login(@RequestBody @Valid AuthLoginRequestDto userRequest) {

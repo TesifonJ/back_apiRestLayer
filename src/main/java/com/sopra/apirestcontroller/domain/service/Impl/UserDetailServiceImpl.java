@@ -29,6 +29,10 @@ public class UserDetailServiceImpl implements UserDetailsService {
     private PasswordEncoder oPasswordEncoder;
     private UserRepositoryImpl oUserRepositoryImpl;
 
+    public UserDetailServiceImpl(){
+        
+    }
+
     @Autowired
     public UserDetailServiceImpl(UserRepositoryImpl oUserRepositoryImpl, JwtUtils jwtUtils, PasswordEncoder oPasswordEncoder) {
         this.oUserRepositoryImpl = oUserRepositoryImpl;

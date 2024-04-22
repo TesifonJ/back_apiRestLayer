@@ -12,7 +12,9 @@ import com.sopra.apirestcontroller.domain.service.iProductTypeService;
 public class ProductTypeServiceImpl implements iProductTypeService {
 
     private ProductTypeRepositoryImpl iTypeRepository;
-
+    public ProductTypeServiceImpl(){
+        
+    }
     @Autowired
     public ProductTypeServiceImpl(ProductTypeRepositoryImpl iTypeRepository) {
         this.iTypeRepository = iTypeRepository;
