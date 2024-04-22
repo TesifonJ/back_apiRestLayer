@@ -40,11 +40,6 @@ public class SecurityConfigTest {
     @Mock
     private AuthenticationConfiguration authenticationConfiguration;
 
-    @BeforeEach
-    public void setup() {
-
-    }
-
     @Test
     public void testSecurityFilterChain() throws Exception {
         SecurityConfig securityConfig = new SecurityConfig();
